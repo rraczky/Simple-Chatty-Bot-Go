@@ -1,0 +1,10 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "// You already are within the body of func main()    \n// Is this task a\
+    \ Spider-man 2 reference!? -- declare the 'pizzaTime' variable below:"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14476#comment
+status: Solved
+record: -1

@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"fmt\"\n\t\"unicode/utf8\"\n)\n\nfunc main()\
+    \ {\n\tvar emoji string\n    fmt.Scanln(&emoji)\n\n    // Call the `utf8.RuneCountInString()`\
+    \ function below to count\n    // how many runes are in the `emoji` string variable:\n\
+    \truneCount := ?\n\n    fmt.Println(runeCount) // DO NOT delete this line; it\
+    \ prints the `emoji` rune count\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24896#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Fri, 10 Feb 2023 07:05:29 UTC"
+record: -1

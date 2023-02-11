@@ -1,0 +1,27 @@
+type: code
+custom_name: A wrong comment can cost anything!
+files:
+- name: main.go
+  visible: true
+  text: |-
+    package main
+
+    import "fmt"
+
+    // nolint: gosimple // <- DO NOT delete this comment!
+    func main() {
+        // Comment some lines and remove some comments to fix the code below:
+        var x // string
+
+        assign a string to the x variable
+        // x = "You must fix the comments to make the code compile!"
+
+        fmt.Println(x)
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16693#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 02 Jan 2023 09:35:24 UTC"
+record: -1
