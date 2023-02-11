@@ -17,15 +17,20 @@ func main() {
 	fmt.Println("Let me guess your age.")
 	fmt.Println("Enter remainders of dividing your age by 3, 5 and 7.")
 
-	// reading all remainders
-	var remainder3 int
-	var remainder5 int
-	var remainder7 int
-	fmt.Scan(&remainder3)
-	fmt.Scan(&remainder5)
-	fmt.Scan(&remainder7)
+	var rem3, rem5, rem7, age int
+	fmt.Scan(&rem3, &rem5, &rem7)
 
-	age := (remainder3*70 + remainder5*21 + remainder7*15) % 105
+	age = (rem3*70 + rem5*21 + rem7*15) % 105
 
 	fmt.Println("Your age is " + strconv.Itoa(age) + "; that's a good time to start programming!")
+	fmt.Println("Now I will prove to you that I can count to any number you want.")
+
+	// read a number and count to it here
+	var count int
+	fmt.Scan(&count)
+	for i := 0; i <= count; i++ {
+		fmt.Println(i, "!")
+	}
+
+	fmt.Println("Completed, have a nice day!")
 }

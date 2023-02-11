@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+- text: 123
+- text: Empty string
+- text: 12
+- text: 012
+- text: 01
 files:
 - name: main.go
   visible: true
@@ -7,7 +13,7 @@ files:
     // You can experiment here, it won’t be checked
 
   learner_created: false
-feedback_link: https://hyperskill.org/learn/step/16690#comment
+feedback_link: https://hyperskill.org/learn/step/14708#comment
 status: Solved
 record: -1
 local_check: false
