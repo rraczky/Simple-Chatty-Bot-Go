@@ -1,5 +1,13 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+- text: It is possible to assign a new value to a variable declared with the keyword
+    <code>сonst</code>
+- text: Every variable must have a name and every data type has a default value
+- text: You can assign a new value to an existing variable using <code>:=</code> by
+    declaring the existing variable and a new variable in a following line.
+- text: It is not possible to change the value of a variable declared with the keyword
+    <code>var</code>
 files:
 - name: main.go
   visible: true

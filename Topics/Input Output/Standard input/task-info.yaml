@@ -1,5 +1,9 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+- text: <code>fmt.Print()</code>
+- text: <code>fmt.Scan()</code>
+- text: <code>fmt.Println()</code>
 files:
 - name: main.go
   visible: true
