@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/584421/additional_files.json
   is_template_based: true
   use_ide: true
-update_date: "Mon, 13 Feb 2023 08:46:16 UTC"
+update_date: "Thu, 17 Aug 2023 05:57:17 UTC"
 stages:
 - id: 1027
   step: 15498
@@ -22,8 +22,12 @@ stages:
   is_completed: false
 topics:
   0:
+  - title: Starting with GitHub
+    theory_id: 4802
   - title: IDE
     theory_id: 10996
+  - title: World Wide Web
+    theory_id: 6633
   - title: Introduction to Go
     theory_id: 17073
   - title: Comments
@@ -76,12 +80,6 @@ topics:
     theory_id: 20084
   - title: Data structures
     theory_id: 16927
-  - title: Pointers
-    theory_id: 15463
-  - title: Functions
-    theory_id: 16388
-  - title: Functional decomposition
-    theory_id: 17506
   - title: Pseudocode
     theory_id: 15090
   - title: Pseudocode basics
@@ -90,6 +88,12 @@ topics:
     theory_id: 20922
   - title: Fixed-size array
     theory_id: 20078
+  - title: Pointers
+    theory_id: 15463
+  - title: Functions
+    theory_id: 16388
+  - title: Functional decomposition
+    theory_id: 17506
   - title: Arrays
     theory_id: 14871
   - title: Slices
@@ -98,7 +102,7 @@ topics:
     theory_id: 15935
   - title: Slice expressions
     theory_id: 20411
-  - title: Functions
-    theory_id: 13884
   - title: Design principles
     theory_id: 8956
+  - title: Functions
+    theory_id: 13884

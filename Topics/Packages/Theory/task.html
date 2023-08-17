@@ -1,4 +1,5 @@
 <h2>Packages</h2>
+<div class="step-text">
 <p>Go is a language that encourages good software engineering practices. An important part of high-quality software is code reuse, applying the DRY principle – Don't Repeat Yourself. Enter Go packages, the next step into code reusability.</p>
 <h5 id="what-is-a-package">What is a package?</h5>
 <p>In the most basic terms, a Go <strong>package</strong> is a directory in your project containing one or more Go source files, or even other nested Go packages. The main purpose of a package is to help you organize related source files together into a single unit, making them reusable and maintainable.</p>
@@ -7,7 +8,7 @@
 <p>Any variable, type, or function within the source file belongs to its declared package, and other source files within the same package can access it.</p>
 <p>Go source files that exist in the same directory must belong to the same package. Even though it is not required for a package to be named after its containing directory, it is a recommended convention to follow.</p>
 <h5 id="importing-a-package">Importing a package</h5>
-<p>One of the most used built-in go packages is <code class="language-go">fmt</code> that provides I/O functionalities. To use this package in your code, you can import it below the package declaration as follows:</p>
+<p>One of the most used built-in Go packages is <code class="language-go">fmt</code> that provides I/O functionalities. To use this package in your code, you can import it below the package declaration as follows:</p>
 <pre><code class="language-go">package packagename
 
 import "fmt"</code></pre>
@@ -99,9 +100,10 @@ func main() {
     color.Red("Hello Hyperskill!") 
 }</code></pre>
 <p>After executing <code class="language-go">go run main.go</code> you will see the following <span style="color: #ff4363;">red-colored </span>output in your terminal:</p>
-<span style="color: #ff4363;"><pre><code class="language-go">Hello Hyperskill!</code></pre></span>
+<pre><span style="color: #ff4363;">Hello Hyperskill!</span></pre>
 <h5 id="internal-packages">Internal packages</h5>
-<p>Last but not least, you can also create an <strong>internal package</strong>. Internal packages are special because they have to reside within the directory named <em>internal</em> in your project. This <em>internal</em> directory is recognized by the go tool that prevents a package from being imported by another unless they both share a common parent.</p>
+<p>Last but not least, you can also create an <strong>internal package</strong>. Internal packages are special because they have to reside within the directory named <em>internal</em> in your project.</p>
+<p>The <code class="language-go">go</code> tool recognizes this <em>internal</em> directory and prevents the package it contains from being imported by any package that doesn't share the same parent directory or is not a subdirectory of this parent directory.</p>
 <p>For example, let's look at the structure of the <em>example </em>directory that contains a nested internal package:</p>
 <pre><code class="language-bash">.
 ├───calculator
@@ -112,9 +114,10 @@ func main() {
 │
 └───main
         main.go</code></pre>
-<p>The internal package <code class="language-go">example/calculator/internal</code> could only be imported inside the code of the <em>calculator.go</em> file or any other Go source files within the <em>example/calculator</em> directory, which is a direct parent of the <em>internal</em> directory. However, if you tried to import the <code class="language-go">example/calculator/internal</code> package from the <code class="language-go">main</code> package that resides in the <em>example/main</em> directory, you would get the following compilation error:</p>
+<p>The internal package <code class="language-go">example/calculator/internal</code> can be imported by the code within <em>calculator.go</em> or any other Go source files within the <em>example/calculator</em> directory and its subdirectories because they share the common parent directory, <em>example/calculator</em>.</p>
+<p>However, if you tried to import the <code class="language-go">example/calculator/internal</code> package from the <code class="language-go">main</code> package that resides in the <em>example/main</em> directory, you would get the following compilation error:</p>
 <pre><code class="language-go">use of internal package example/calculator/internal not allowed</code></pre>
-<p>This happens because the <em>example/main</em> directory and the <em>example/calculator/internal</em> directory don't share the common root<em> example/calculator</em>.</p>
+<p>This happens because the <em>example/main</em> directory and the <em>example/calculator/internal</em> directory do NOT share the common parent directory, <em>example/calculator</em>.</p>
 <h5 id="conclusion">Conclusion</h5>
 <p>Let's briefly remember what you've learned on this topic:</p>
 <ul>
@@ -128,7 +131,8 @@ func main() {
 <p>You can install external packages to your project via the <code class="language-go">go get</code> command;</p>
 </li>
 <li>
-<p>Internal packages are a special type of package that should always reside within a directory named <em>internal</em>. Remember that internal packages can only be imported by packages that are direct parents of the internal package.</p>
+<p>Internal packages are a special type of package that should always reside within a directory named <em>internal</em>. Remember that internal packages can be imported only by packages that reside within the same parent directory as the internal package or its subdirectories.</p>
 </li>
 </ul>
 <p>Wow! This was a long topic, but there is more work to do... let's do some exercises now to test your knowledge about packages!</p>
+</div>

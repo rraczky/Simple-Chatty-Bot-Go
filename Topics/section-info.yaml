@@ -7,3 +7,5 @@ content:
 - Strings
 - String formatting
 - Pointers
+- Arrays
+- Slices
